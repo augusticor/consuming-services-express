@@ -1,0 +1,11 @@
+{
+  "name": "consuming-services",
+  "version": "1.0.0",
+  "description": "consuming backend services on frontend basic",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "augusticor",
+  "license": "ISC"
+}
