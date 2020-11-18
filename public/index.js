@@ -4,9 +4,10 @@ const btnAdd = document.querySelector('.add');
 const btnList = document.querySelector('.list');
 const list = document.querySelector('.list-article');
 
-btnAdd.addEventListener('onClick', createNewDog);
+btnAdd.addEventListener('click', createNewDog);
+btnList.addEventListener('click', listDogs);
 
-const createNewDog = () => {
+function createNewDog() {
 	const options = {
 		method: 'POST',
 		headers: {
@@ -22,16 +23,16 @@ const createNewDog = () => {
 			dog.textContent = data.name;
 			list.appendChild(dog);
 		});
-};
+}
 
-const listDogs = () => {
+function listDogs() {
 	fetch('/dogs')
 		.then((response) => response.json())
 		.then((data) => {
-			for (let dog of data[0]) {
+			for (let dog of data) {
 				let h3 = document.createElement('h3');
 				h3.textContent = dog.name;
 				list.appendChild(h3);
 			}
 		});
-};
+}

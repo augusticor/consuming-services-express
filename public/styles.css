@@ -1,5 +1,5 @@
 body {
-    background-color: gray;
+    background-color: whitesmoke;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -8,8 +8,9 @@ body {
 .button {
     background-color: wheat;
     border: 2px solid black;
+    font-size: 16px;
     height: 30px;
-    margin: 0 50px 0 50px;
+    margin: 10px 50px 0 50px;
 }
 
 .button:hover {

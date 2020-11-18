@@ -30,7 +30,8 @@ server.get('/dogs', (req, res) => {
 });
 
 server.post('/dogs', (req, res) => {
-	let dog = dogs[Math.floor(Math.random * dogs.length)];
+	let number = Math.floor(Math.random() * dogs.length);
+	let dog = dogs[number];
 	dogs.push(dog);
 	res.send(dog);
 });
